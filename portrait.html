@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="format-detection" content="telephone=no">
+        <title>Ying-Tsu, Tseng | Portfolio</title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+        <link rel = "icon" href="portfolio/icon.png" type="image/x-icon"> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+        <link rel="stylesheet" href="portfolio.css">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-company">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">HOME</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+          
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="graphic.html">Graphic Design <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="campaign.html">Campaigns/Editorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portrait.html">Portraits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reume.html">About</a>
+                        </li>
+                    </ul>  
+                </div>
+            </div>
+        </nav>
+      
+        <div class="contact" onclick="openModal()" >
+            <p>LINK</p>
+        </div>
+
+        <div class="container">
+            <h2>Portraits</h2>
+                <ul class="sub_nav"> 
+                        <li class="active" style="background-color: white; color:black">All Collections</li>
+                        <li>Childhood Collection</li>
+                        <li>B/W Collection</li>
+                        <li>NewKid Collection</li>
+                        <li>Twins Collection</li>
+                        <li>Lost Girl Collection</li>
+                        <li>Unlimited Collection</li>
+                        <li>Wonderland Collection</li>       
+                </ul>
+                <div class="item-list">
+                    <div class="row">
+                        <li class="col-md-3 col-xs-6 item child" >
+                            <div class="image image1 ">
+                                <div class="hover">
+                                    <a class="fancybox" rel="gallery1" href="#portfolio_1" onclick="openPortModal()">
+                                        <div class="item-content">
+                                            <h4>Childhood Collection</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-3 col-xs-6 item B/W" >
+                            <div class="image image2">
+                                <div class="hover">
+                                    <a class="fancybox" rel="gallery2" href="#portfolio_2" onclick="openPortModal2()">
+                                        <div class="item-content">
+                                            <h4>B/W Collection</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-3 col-xs-6 item NewKid" >
+                            <div class="image image3">
+                                <div class="hover">
+                                    <a class="fancybox" rel="gallery3" href="#portfolio_3" onclick="openPortModal3()">
+                                        <div class="item-content">
+                                            <h4>NewKid Collection</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-3 col-xs-6 item Twins" >
+                            <div class="image image4">
+                                <div class="hover">
+                                    <a class="fancybox" rel="gallery4" href="#portfolio_4" onclick="openPortModal4()">
+                                        <div class="item-content">
+                                            <h4>Twins Collection</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-3 col-xs-6 item Lost" >
+                            <div class="image image5">
+                                <div class="hover">
+                                    <a class="fancybox" rel="gallery5" href="#portfolio_5" onclick="openPortModal5()">
+                                        <div class="item-content">
+                                            <h4>Lost Girl Collection</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-3 col-xs-6 item Unlimited" >
+                            <div class="image image6">
+                                <div class="hover">
+                                    <a class="fancybox" rel="gallery6" href="#portfolio_6" onclick="openPortModal6()">
+                                        <div class="item-content">
+                                            <h4>Unlimited Collection</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="col-md-3 col-xs-6 item Wonderland" >
+                            <div class="image image7">
+                                <div class="hover">
+                                    <a class="fancybox" rel="gallery7" href="#portfolio_7" onclick="openPortModal7()">
+                                        <div class="item-content">
+                                            <h4>Wonderland Collection</h4>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </section>
+        </div>   
+    </div>
+     <!-- portfolio popup modal -->
+     <div id="portfolio-modal">
+        <div id="portfolio_1" class="popup_portfolio">
+            <img class="mySlides1" src="portfolio/P3/2/10.jpg"  alt="" />
+            <img class="mySlides1" src="portfolio/P3/2/13.jpg" alt="" />
+            <img class="mySlides1" src="portfolio/P3/2/14.jpg" alt="" />
+            <img class="mySlides1" src="portfolio/P3/2/15.jpg" alt="" />
+        </div>   
+    </div>
+
+    <!-- popup window-->
+    <div id="social-modal">
+        <div class="social-content">
+            <div class="row social-links">
+                <div class="col-6 youtube" onclick="location.href='https://www.youtube.com/channel/UC2L5pXTjaCnGogIHAssdeUg?sub_confirmation=1';"></div>
+                <div class="col-6 instagram" onclick="location.href='http://www.instagram.com/sonythegirl';"></div>
+            </div>
+        </div>
+    </div>    
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('social-modal');
+            // When the user clicks anywhere outside of the modal, close it
+            window.addEventListener("click", function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            });
+            
+            function openModal(){
+                modal.style.display = "block";
+            }
+
+           
+
+        </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="isotope.pkgd.min.js"></script>
+        <script src="cells-by-row.js"></script>
+        <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

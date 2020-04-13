@@ -14,6 +14,15 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+figure {
+    position: fixed;
+    top: 95%;
+    left: 70%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
 .contact{
     cursor:pointer;
     position:absolute;
@@ -194,6 +203,27 @@
     background-image:url(portfolio/P1/6.jpg);
 }
 
+.graphic7{
+    background-image:url(portfolio/P1/7.jpg);
+}
+
+.graphic8{
+    background-image:url(portfolio/P1/8.jpg);
+}
+
+.graphic9{
+    background-image:url(portfolio/P1/9.jpg);
+}
+
+.graphic10{
+    background-image:url(portfolio/P1/10.jpg);
+}
+
+.graphic11{
+    background-image:url(portfolio/P1/11.jpg);
+}
+
+
 /* campaign page css */
 
 .camp{
@@ -214,6 +244,7 @@
 
 .camp2{
     background-image: url(portfolio/P2/2.jpg);
+    background-position: 55%;
 }
 
 .camp3{
@@ -365,7 +396,7 @@
     background-color: black;
     color:white;
     padding:0;
-    border:solid 2px black;
+    /* border:solid 2px black; */
     font-family: 'Quicksand', sans-serif;
     font-style: light;
     font-size:15px;
@@ -373,6 +404,13 @@
     height:30px;
 }
 
+.sub_nav li p{
+    margin-top:2px;
+}
+
+/* .sub_nav li.active{
+    border: solid 2px red;
+} */
 
 .sub_nav li:hover{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -490,13 +528,17 @@
 /* resume page css */
 
 .resumeBody{
-    font-family: 'Quicksand', sans-serif;    
+    font-family: 'Quicksand', sans-serif; 
+    font-style:regular;   
 }
 
 .resumeContainer{
+    margin:20px auto;
+}
+
+.resumeContainer h5{
     font-family: 'Roboto Slab', serif;
     font-style:regular;
-    margin:20px auto;
 }
 
 .resume{

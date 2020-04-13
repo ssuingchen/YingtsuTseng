@@ -2,7 +2,7 @@
     background-color:black !important;
 }
 
-.body{
+.body, nav{
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -42,7 +42,7 @@
 
 #social-modal{
     width:100%;
-    height:100vh;
+    height:600vh;
     background-color: rgba(0,0,0,0.5);
     position:absolute;
     top:0;
@@ -123,6 +123,8 @@
 }
 
 .graphic{
+    cursor: pointer;
+    width:285px;
     height:285px;
     margin:45px;
 	background-size:contain;
@@ -131,23 +133,57 @@
     float:left;
     padding:0;
     border:solid black 2px;
+}
+
+#graphic-modal{
+    width:100%;
+    height:600vh;
+    background-color: rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.graphic-content{
+    width:590px;
+    height:590px;
+    box-shadow: 3px 3px 16px 0 rgba(114, 108, 108, 0.25);   
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.graphic-content img{
+    width:100%;
     
 }
+
+.graphic-content:hover{
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+
 
 .graphic1{
     background-image:url(portfolio/P1/1.jpg);
 }
 
 .graphic2{
-    background-image:url(portfolio/P1/2.png);
+    background-image:url(portfolio/P1/2.jpg);
 }
 
 .graphic3{
-    background-image:url(portfolio/P1/3.png);
+    background-image:url(portfolio/P1/3.jpg);
 }
 
 .graphic4{
-    background-image:url(portfolio/P1/4.png);
+    background-image:url(portfolio/P1/4.jpg);
 }
 
 .graphic5{
@@ -161,6 +197,7 @@
 /* campaign page css */
 
 .camp{
+    width: 285px;
     height:285px;
     margin:45px;
 	background-size:cover;
@@ -270,13 +307,37 @@
     background-image: url(portfolio/P2/24.jpg);
 }
 
-/* portraits collection */
+#champ-modal{
+    width:100%;
+    height:600vh;
+    background-color: rgba(0,0,0,0.5);
+    position:absolute;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
 
-/* .holder{
-    display:table-row;
-    position:relative;
-    
-} */
+.champ-content{
+    width: 80%;
+    /* background-image: url(portfolio/popup.png); */
+    box-shadow: 3px 3px 16px 0 rgba(114, 108, 108, 0.25);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    /* overflow: hidden; */
+}
+
+#champ-img{
+    width:100%;
+
+}
+
+/* portraits collection */
 
 .container h2{
 	display: block;
@@ -312,6 +373,7 @@
     height:30px;
 }
 
+
 .sub_nav li:hover{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -329,13 +391,14 @@
 }
 
 .item {
-    text-align: center;
+    align-items: start;
     width:285px;
     height:285px;
-    float:left;
-    margin: 10px 0 40px 80px;
+    margin: 20px 0 20px 90px;
     padding:0;
 }
+
+
 
 .item .image {
     position: relative;
@@ -346,31 +409,6 @@
     background-size: cover;
 }
 
-.item .image1{
-    background-image: url(portfolio/P3/2/13.jpg);
-}
-
-.item .image2{
-    background-image: url(portfolio/P3/3/IMG_0363.JPG_effected.jpg);
-}
-
-.item .image3{
-    background-image: url(portfolio/P3/4/IMG_9279a.jpg);
-}
-
-.item .image4{
-    background-image: url(portfolio/P3/5/05.jpg);
-}
-.item .image5{
-    background-image: url(portfolio/P3/6/IMG_8481.JPG_effected.jpg);
-}
-.item .image6{
-    background-image: url(portfolio/P3/7/IMG_5196.JPG_effected.jpg);
-}
-
-.item .image7{
-    background-image: url(portfolio/P3/8/IMG_5695_editorial-01.jpg);
-}
 .item .image img {
 	max-width: 100%;
     height:auto;
@@ -401,11 +439,6 @@
 	padding: 0 30px;
 }
 
-.item a{
-    text-decoration: none;
-    
-}
-
 .item .item-content h4{
 	display: block;
 	color: black;
@@ -419,27 +452,9 @@
 	margin: 0 0 15px;
 }
 
-/* .sub_nav a {
-	font-size: 14px;
-	line-height: 16px;
-	text-transform: uppercase;
-	padding: 0 0 10px;
-	font-family: sans-serif;
-	font-weight: normal;
-}
-.sub_nav a:hover,.sub_nav a.active{
-	color:purple;
-	border-bottom: 4px solid red;
-	text-decoration: none;
-	-webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-} */
-
 #portfolio-modal{
     width:100%;
-    height:100vh;
+    height:600vh;
     background-color: rgba(0,0,0,0.5);
     position:absolute;
     top:0;
@@ -450,10 +465,12 @@
 }
 
 .popup_portfolio{
-    width:65%;
-    position: relative;
-    left:20%;
-    top:60px;
+    width:80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .popup_portfolio h3{
@@ -467,14 +484,8 @@
 
 .popup_portfolio img {
 	width: 90%;
-	height: auto;
-    border-radius: 8px;
-    
+	height: auto;    
 }
-
-/* .popup_portfolio .mySlides1{
-    display: none;
-} */
 
 /* resume page css */
 
@@ -491,6 +502,24 @@
 .resume{
     margin:20px 0;
 }
+
+/* screen media */
+
+@media only screen and (max-width: 720px) {
+    .graphic-content{
+        width:285px;
+        height:285px;
+    }
+
+    /* .champ-content{
+        transform:rotate(90deg) scale(2.3);
+        position: relative;
+        top: 10%;
+        
+    } */
+  }
+
+
 
 
 

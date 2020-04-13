@@ -12,24 +12,23 @@
         <link rel="stylesheet" href="portfolio.css">
     </head>
     <body>
-        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-company">
             <div class="container">
                 <a class="navbar-brand" href="index.html">HOME</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
           
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                           <a class="nav-link" href="graphic.html">Graphic Design <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="campaign.html">Campaigns/Editorials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="portrait.html">Portraits</a>
+                            <a class="nav-link active" href="portrait.html">Portraits</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="reume.html">About</a>
@@ -46,141 +45,154 @@
         <div class="container">
             <h2>Portraits</h2>
                 <ul class="sub_nav"> 
-                        <li class="active" style="background-color: white; color:black">All Collections</li>
-                        <li>Childhood Collection</li>
-                        <li>B/W Collection</li>
-                        <li>NewKid Collection</li>
-                        <li>Twins Collection</li>
-                        <li>Lost Girl Collection</li>
-                        <li>Unlimited Collection</li>
-                        <li>Wonderland Collection</li>       
+                    <li class="subLi active" onclick="showPics(0)" style="background-color: white; color:black">All Collections</li>
+                    <li class="subLi" onclick="showPics(1)">Childhood Collection</li>
+                    <li class="subLi" onclick="showPics(2)">B/W Collection</li>
+                    <li class="subLi" onclick="showPics(3)">NewKid Collection</li>
+                    <li class="subLi" onclick="showPics(4)">Twins Collection</li>
+                    <li class="subLi" onclick="showPics(5)">Lost Girl Collection</li>
+                    <li class="subLi" onclick="showPics(6)">Unlimited Collection</li>
+                    <li class="subLi" onclick="showPics(7)">Wonderland Collection</li>       
                 </ul>
                 <div class="item-list">
-                    <div class="row">
-                        <li class="col-md-3 col-xs-6 item child" >
-                            <div class="image image1 ">
-                                <div class="hover">
-                                    <a class="fancybox" rel="gallery1" href="#portfolio_1" onclick="openPortModal()">
-                                        <div class="item-content">
-                                            <h4>Childhood Collection</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-xs-6 item B/W" >
-                            <div class="image image2">
-                                <div class="hover">
-                                    <a class="fancybox" rel="gallery2" href="#portfolio_2" onclick="openPortModal2()">
-                                        <div class="item-content">
-                                            <h4>B/W Collection</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-xs-6 item NewKid" >
-                            <div class="image image3">
-                                <div class="hover">
-                                    <a class="fancybox" rel="gallery3" href="#portfolio_3" onclick="openPortModal3()">
-                                        <div class="item-content">
-                                            <h4>NewKid Collection</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-xs-6 item Twins" >
-                            <div class="image image4">
-                                <div class="hover">
-                                    <a class="fancybox" rel="gallery4" href="#portfolio_4" onclick="openPortModal4()">
-                                        <div class="item-content">
-                                            <h4>Twins Collection</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-xs-6 item Lost" >
-                            <div class="image image5">
-                                <div class="hover">
-                                    <a class="fancybox" rel="gallery5" href="#portfolio_5" onclick="openPortModal5()">
-                                        <div class="item-content">
-                                            <h4>Lost Girl Collection</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-xs-6 item Unlimited" >
-                            <div class="image image6">
-                                <div class="hover">
-                                    <a class="fancybox" rel="gallery6" href="#portfolio_6" onclick="openPortModal6()">
-                                        <div class="item-content">
-                                            <h4>Unlimited Collection</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="col-md-3 col-xs-6 item Wonderland" >
-                            <div class="image image7">
-                                <div class="hover">
-                                    <a class="fancybox" rel="gallery7" href="#portfolio_7" onclick="openPortModal7()">
-                                        <div class="item-content">
-                                            <h4>Wonderland Collection</h4>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                    <div id="canvas" class="row">
                     </div>
                 </div>
             </section>
-        </div>   
-    </div>
-     <!-- portfolio popup modal -->
-     <div id="portfolio-modal">
-        <div id="portfolio_1" class="popup_portfolio">
-            <img class="mySlides1" src="portfolio/P3/2/10.jpg"  alt="" />
-            <img class="mySlides1" src="portfolio/P3/2/13.jpg" alt="" />
-            <img class="mySlides1" src="portfolio/P3/2/14.jpg" alt="" />
-            <img class="mySlides1" src="portfolio/P3/2/15.jpg" alt="" />
-        </div>   
-    </div>
-
-    <!-- popup window-->
-    <div id="social-modal">
-        <div class="social-content">
-            <div class="row social-links">
-                <div class="col-6 youtube" onclick="location.href='https://www.youtube.com/channel/UC2L5pXTjaCnGogIHAssdeUg?sub_confirmation=1';"></div>
-                <div class="col-6 instagram" onclick="location.href='http://www.instagram.com/sonythegirl';"></div>
-            </div>
         </div>
-    </div>    
 
-    <script>
-        // Get the modal
-        var modal = document.getElementById('social-modal');
+        <!-- portfolio popup modal -->
+        <div id="portfolio-modal">
+            <div class="popup_portfolio">
+                <img id="portfolio-img" src="" alt="">
+            </div>   
+        </div>
+
+        <!-- popup window-->
+        <div id="social-modal">
+            <div class="social-content">
+                <div class="row social-links">
+                    <div class="col-6 youtube" onclick="location.href='https://www.youtube.com/channel/UC2L5pXTjaCnGogIHAssdeUg?sub_confirmation=1';"></div>
+                    <div class="col-6 instagram" onclick="location.href='http://www.instagram.com/sonythegirl';"></div>
+                </div>
+            </div>
+        </div>    
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('social-modal');
             // When the user clicks anywhere outside of the modal, close it
             window.addEventListener("click", function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
             });
-            
+
+            var Collections = ['Childhood Collection','B/W Collection','NewKid Collection','Twins Collection','Lost Girl Collection','Unlimited Collection','Wonderland Collection'];
+            var numOfPics = [4,2,3,4,2,6,2];
+            var nameOfPics = [['1','2','3','4'],['1','2'],['1','2','3'],['1','2','3','4'],['1','2'],['1','2','3','4','5','6'],['1','2']];
+            var portfolioModal = document.getElementById('portfolio-modal');
+            var portfolioImg = document.getElementById('portfolio-img');
+
+            window.addEventListener("click", function(event) {
+                if (event.target == portfolioModal) {
+                    portfolioModal.style.display = "none";
+                }
+            });
+
+            showPics(0);
+
             function openModal(){
                 modal.style.display = "block";
             }
 
-           
+            function addCollection (index) { 
+                var idxStr = index.toString();
 
+                // create a new div element 
+                var newLi = document.createElement('li');
+                newLi.setAttribute('class','item');
+                document.getElementById('canvas').appendChild(newLi);
+
+                var newDiv1 = document.createElement('div');
+                newDiv1.setAttribute('class','image');
+                var urlString = 'url(portfolio/P3/'+idxStr+'/'+idxStr+'-1.jpg)';
+                newDiv1.style.backgroundImage = urlString;
+                // console.log('portfolio/P3/'+idxStr+'/'+idxStr+'-1.jpg')
+                newLi.appendChild(newDiv1);
+
+                var newDiv2 = document.createElement('div');
+                newDiv2.setAttribute('class','hover');
+                var funStr = 'showPics('+idxStr+')';
+                newDiv2.setAttribute('onclick',funStr);
+                newDiv1.appendChild(newDiv2);
+
+                var newDiv3 = document.createElement('div');
+                newDiv3.setAttribute('class','item-content');
+                newDiv2.appendChild(newDiv3);
+
+                var newH = document.createElement('h4');
+                newH.textContent = Collections[index-1];
+                newDiv3.appendChild(newH);
+            }
+
+            function addPicture(collection,index){
+                var idxStr = index.toString();
+                var colStr = collection.toString();
+
+                // create a new div element 
+                var newLi = document.createElement('li');
+                newLi.setAttribute('class','item');
+                document.getElementById('canvas').appendChild(newLi);
+
+                var newDiv1 = document.createElement('div');
+                newDiv1.setAttribute('class','image');
+                var urlString = 'url(portfolio/P3/'+colStr+'/'+colStr+'-'+idxStr+'.jpg)';
+                newDiv1.style.backgroundImage = urlString;
+                newLi.appendChild(newDiv1);
+
+                var newDiv2 = document.createElement('div');
+                newDiv2.setAttribute('class','hover');
+                var funStr = 'openPicModal('+colStr+','+idxStr+')';
+                newDiv2.setAttribute('onclick',funStr);
+                newDiv1.appendChild(newDiv2);
+
+                var newDiv3 = document.createElement('div');
+                newDiv3.setAttribute('class','item-content');
+                newDiv2.appendChild(newDiv3);
+
+                var newH = document.createElement('h4');
+                newH.textContent = nameOfPics[collection-1][index-1];
+                newDiv3.appendChild(newH);
+            }
+
+            function showPics(collection){
+                // console.log("here");
+                canvas = document.getElementById('canvas');
+                while (canvas.hasChildNodes()) {   
+                    canvas.removeChild(canvas.firstChild);
+                }
+
+                if(collection == 0){
+                    for(var i = 1; i <= 7; i++){
+                        addCollection(i);
+                    }
+                }
+                else{
+                    for(var i = 1; i <= numOfPics[collection-1]; i++){
+                        addPicture(collection,i);
+                    }
+                }
+            }
+
+            function openPicModal(collection,index){
+                portfolioImg.src = "portfolio/P3/"+collection.toString()+"/"+collection.toString()+"-"+index.toString()+".jpg";
+                // console.log("portfolio/P3/"+collection.toString+"/"+collection.toString+"-"+index.toString()+".jpg");
+                portfolioModal.style.display = 'block';
+            }
         </script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+       
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="isotope.pkgd.min.js"></script>
-        <script src="cells-by-row.js"></script>
-        <script type="text/javascript" src="js/fancybox/jquery.fancybox.pack.js"></script>
-        <script type="text/javascript" src="main.js"></script>
     </body>
 </html>

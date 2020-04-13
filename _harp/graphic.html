@@ -22,8 +22,8 @@
           
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="graphic.html">Graphic Design <span class="sr-only">(current)</span></a>
+                        <li class="nav-item ">
+                          <a class="nav-link active" href="graphic.html">Graphic Design <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="campaign.html">Campaigns/Editorials</a>
@@ -46,19 +46,19 @@
 
         <div class="container">
             <div class="row content">
-                <div class="graphic graphic1 col-xs-6 col-md-3"></div>
-                <div class="graphic graphic2 col-xs-6 col-md-3"></div>
-                <div class="graphic graphic3 col-xs-6 col-md-3"></div>
-                <div class="graphic graphic4 col-xs-6 col-md-3"></div>
-                <div class="graphic graphic5 col-xs-6 col-md-3"></div>
-                <div class="graphic graphic6 col-xs-6 col-md-3"></div>
+                <div class="graphic graphic1 " onclick="openPicModal(1)"></div>
+                <div class="graphic graphic2 " onclick="openPicModal(2)"></div>
+                <div class="graphic graphic3 " onclick="openPicModal(3)"></div>
+                <div class="graphic graphic4 " onclick="openPicModal(4)"></div>
+                <div class="graphic graphic5 " onclick="openPicModal(5)"></div>
+                <div class="graphic graphic6 " onclick="openPicModal(6)"></div>
             </div>
         </div>
 
         <!-- graphic popup -->
         <div id="graphic-modal">
             <div class="graphic-content">
-                <img src="portfolio/P1/1.jpg" alt="" />
+                <img id="graphicImg" src="" alt="" >
             </div>
         </div>
         
@@ -75,17 +75,30 @@
         <script>
             // Get the modal
             var modal = document.getElementById('social-modal');
+            var graphicModal = document.getElementById('graphic-modal');
+
             // When the user clicks anywhere outside of the modal, close it
             window.addEventListener("click", function(event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
                 }
             });
+
+            window.addEventListener("click", function(event){
+                if (event.target == graphicModal) {
+                    graphicModal.style.display = "none";
+                }
+            })
             
             function openModal(){
                 modal.style.display = "block";
             }
 
+            function openPicModal(index){
+                document.getElementById('graphicImg').src = "portfolio/P1/"+index.toString()+".jpg";
+                graphicModal.style.display = "block";
+            }
+            
         </script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

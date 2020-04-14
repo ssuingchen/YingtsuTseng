@@ -14,7 +14,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-company">
             <div class="container">
-                <a class="navbar-brand" href="index.html">HOME</a>
+                <a class="navbar-brand" href="index.html">Tseng</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -43,22 +43,21 @@
         </div>
 
         <div class="container">
-            <h2>Portraits</h2>
-                <ul class="sub_nav"> 
-                    <li id="all" class="subLi active" onclick="showPics(0)">All Collections</li>
-                    <li class="subLi" onclick="showPics(1)"><p>Childhood Collection</p></li>
-                    <li class="subLi" onclick="showPics(2)"><p>B/W Collection</p></li>
-                    <li class="subLi" onclick="showPics(3)"><p>NewKid Collection</p></li>
-                    <li class="subLi" onclick="showPics(4)"><p>Twins Collection</p></li>
-                    <li class="subLi" onclick="showPics(5)"><p>Lost Girl Collection</p></li>
-                    <li class="subLi" onclick="showPics(6)"><p>Unlimited Collection</p></li>
-                    <li class="subLi" onclick="showPics(7)"><p>Wonderland Collection</p></li>       
-                </ul>
-                <div class="item-list">
-                    <div id="canvas" class="row">
-                    </div>
-                </div>
-            </section>
+            <div class="h2"><h2>Portraits</h2></div>
+            
+            <ul class="sub_nav"> 
+                <li id="all" class="subLi active" onclick="showPics(0)"><p>All Collections</p></li>
+                <li class="subLi" onclick="showPics(1)"><p>Childhood</p></li>
+                <li class="subLi" onclick="showPics(2)"><p>B/W</p></li>
+                <li class="subLi" onclick="showPics(3)"><p>NewKid</p></li>
+                <li class="subLi" onclick="showPics(4)"><p>Twins</p></li>
+                <li class="subLi" onclick="showPics(5)"><p>Lost Girl</p></li>
+                <li class="subLi" onclick="showPics(6)"><p>Unlimited</p></li>
+                <li class="subLi" onclick="showPics(7)"><p>Wonderland</p></li>       
+            </ul>
+            <div class="item-list">
+                <div id="canvas"></div>
+            </div>
         </div>
 
         <!-- portfolio popup modal -->
@@ -88,7 +87,7 @@
                 }
             });
 
-            var Collections = ['Childhood Collection','B/W Collection','NewKid Collection','Twins Collection','Lost Girl Collection','Unlimited Collection','Wonderland Collection'];
+            var Collections = ['Childhood','B/W','NewKid','Twins','Lost Girl','Unlimited','Wonderland'];
             var numOfPics = [4,2,3,4,2,6,2];
             var nameOfPics = [['1','2','3','4'],['1','2'],['1','2','3'],['1','2','3','4'],['1','2'],['1','2','3','4','5','6'],['1','2']];
             var portfolioModal = document.getElementById('portfolio-modal');

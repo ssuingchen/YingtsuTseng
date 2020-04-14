@@ -25,15 +25,16 @@ figure {
 
 .contact{
     cursor:pointer;
-    position:absolute;
-    right:0;
-    top: 70%;
+    position:relative;
+    float:right;
+    top:350px;
     width: 50px;
     height:120px;
     background-color: white;
     border: solid #838383 2px;
     border-radius: 20px 0 0 20px;
     z-index:2;
+    transition: all 0.5s ease-out;
 }
 
 .contact:hover{
@@ -67,8 +68,9 @@ figure {
     background-image: url(portfolio/popup.png);
     box-shadow: 3px 3px 16px 0 rgba(114, 108, 108, 0.25);
     position: relative;
-    margin:35vh auto;    
+    margin:35vh auto;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
 .social-content:hover{
@@ -406,6 +408,7 @@ figure {
 
 .sub_nav li p{
     margin-top:2px;
+    transition: all 0.5s ease-out;
 }
 
 .sub_nav #all{
@@ -470,6 +473,7 @@ figure {
     top: 0;
     background: white;
 	opacity: 0;
+	transition: all 0.5s ease-out;
 }
 
 .item .hover:hover{
@@ -512,11 +516,11 @@ figure {
 }
 
 .popup_portfolio{
-    width:80%;
+    width:45%;
     position: fixed;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
+    -webit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -530,7 +534,7 @@ figure {
 }
 
 .popup_portfolio img {
-	width: 90%;
+	width: 100%;
 	height: auto;    
 }
 
@@ -562,13 +566,11 @@ figure {
         height:285px;
     }
 
-    /* .champ-content{
-        transform:rotate(90deg) scale(2.3);
-        position: relative;
-        top: 10%;
-        
-    } */
-  }
+    .popup_portfolio{
+        width:80%;
+    }
+
+}
 
 
 

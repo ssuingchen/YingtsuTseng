@@ -45,7 +45,7 @@
         <div class="container">
             <h2>Portraits</h2>
                 <ul class="sub_nav"> 
-                    <li class="subLi active" onclick="showPics(0)" style="background-color: white; color:black">All Collections</li>
+                    <li id="all" class="subLi active" onclick="showPics(0)">All Collections</li>
                     <li class="subLi" onclick="showPics(1)"><p>Childhood Collection</p></li>
                     <li class="subLi" onclick="showPics(2)"><p>B/W Collection</p></li>
                     <li class="subLi" onclick="showPics(3)"><p>NewKid Collection</p></li>
@@ -167,6 +167,17 @@
             }
 
             function showPics(collection){
+                //active
+                var list = document.getElementsByClassName("subLi");
+                for(var i = 0; i < list.length; i++ ){
+                    if(list[i].className == 'subLi active'){
+                        list[i].className = 'subLi';
+                        break;
+                    } 
+                }
+                list[collection].className = "subLi active";
+                console.log(list);
+
                 // console.log("here");
                 canvas = document.getElementById('canvas');
                 while (canvas.hasChildNodes()) {   

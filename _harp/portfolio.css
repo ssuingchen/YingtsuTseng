@@ -408,9 +408,18 @@ figure {
     margin-top:2px;
 }
 
-/* .sub_nav li.active{
-    border: solid 2px red;
-} */
+.sub_nav #all{
+    font-weight: bold;
+    background-color: white;
+    color:black;
+}
+
+.sub_nav .active{
+    background-color: white; 
+    color:black; 
+    border:solid 2px black;
+    box-sizing:content-box;
+}
 
 .sub_nav li:hover{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -432,7 +441,7 @@ figure {
     align-items: start;
     width:285px;
     height:285px;
-    margin: 20px 0 20px 90px;
+    margin: 20px 0 20px 80px;
     padding:0;
 }
 
